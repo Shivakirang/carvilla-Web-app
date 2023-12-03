@@ -11,10 +11,10 @@ jobs:
             - name: Checkout 
               uses: actions/checkout@v1 
             - name: Configure AWS Credentials 
-              uses: aws-actions/configure-credentials@v1 
+              uses: aws-actions/configure-aws-credentials@v1 
               with: 
                 aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
-                aws-secrect-access-key-id: ${{ secrets.SECRET_ACCESS_KEY_ID }} 
+                aws-secret-access-key-id: ${{ secrets.SECRET_ACCESS_KEY_ID }} 
                 aws-region: us-east-1 
                 
             - name: Deploy static site to S3 bucket 
